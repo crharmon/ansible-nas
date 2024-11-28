@@ -285,9 +285,9 @@
       tags:
         - nextcloud
 
-    - role: nomad
-      tags:
-        - nomad
+  #  - role: nomad
+  #    tags:
+  #      - nomad
 
     - role: nzbget
       tags:
@@ -460,3 +460,15 @@
     - role: znc
       tags:
         - znc
+    ###
+    ### Personally added Applications
+    ###
+    - role: emulatorjs
+      tags:
+        - emulatorjs
+      when: (emulatorjs_enabled | default(false))
+
+    - role: handbrake
+      tags:
+        - handbrake
+      when: (handbrake_enabled | default(false))

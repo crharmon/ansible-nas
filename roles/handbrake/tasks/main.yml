@@ -1,0 +1,30 @@
+---
+- name: Create Handbrake Directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ handbrake_config_directory }}"
+    - "{{ handbrake_watch_directory }}"
+    - "{{ handbrake_output_directory }}"
+
+- name: HandBrake Docker Container
+  docker_container:
+    name: handbrake
+    image: jlesage/handbrake
+    pull: true
+    volumes:
+      - "{{ handbrake_config_directory }}:/config:rw"
+      - "{{ handbrake_home_directory }}:/storage:ro"
+      - "{{ handbrake_watch_directory }}:/watch:rw"
+      - "{{ handbrake_output_directory }}:/output:rw"
+      
+    ports:
+      - "{{ handbrake_port_http }}:5800"
+
+    # env:
+    #   TZ: "{{ ansible_nas_timezone }}"
+    #   PUID: "{{ emulatorjs_user_id }}"
+    #   PGID: "{{ emulatorjs_group_id }}"
+    restart_policy: unless-stopped
+    #memory: "{{ emulatorjs_memory }}"

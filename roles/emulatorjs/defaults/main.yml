@@ -1,0 +1,27 @@
+---
+# enable or disable the application
+emulatorjs_enabled: false
+
+# directories
+emulatorjs_config_directory: "{{ docker_home }}/emulatejs/config"
+emulatorjs_roms_directory: "{{ games_root }}/Emulation/ROMs"
+emulatorjs_nes_directory: "{{ emulatorjs_roms_directory }}/NES"
+emulatorjs_snes_directory: "{{ emulatorjs_roms_directory }}/SNES"
+emulatorjs_gen_directory: "{{ emulatorjs_roms_directory }}/GEN"
+emulatorjs_gba_directory: "{{ emulatorjs_roms_directory }}/GBA"
+emulatorjs_n64_directory: "{{ emulatorjs_roms_directory }}/N64"
+emulatorjs_arcade_directory: "{{ emulatorjs_roms_directory }}/MAME"
+emulatorjs_saturn_directory: "{{ emulatorjs_roms_directory }}/SATURN"
+emulatorjs_playstation_directory: "{{ emulatorjs_roms_directory }}/PS1"
+
+# uid / gid
+emulatorjs_user_id: "0"
+emulatorjs_group_id: "0"
+
+# network
+emulatorjs_hostname: "emulatorjs"
+emulatorjs_port_http: "8888"
+emulatorjs_manage_port_http: "3000"
+
+# specs
+#emulatorjs_memory: "1g"

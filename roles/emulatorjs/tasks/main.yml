@@ -1,0 +1,32 @@
+---
+- name: Create Emulatorjs Directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ emulatorjs_config_directory }}"
+
+- name: Emulatorjs Docker Container
+  docker_container:
+    name: emulatorjs
+    image: linuxserver/emulatorjs
+    pull: true
+    volumes:
+      - "{{ emulatorjs_config_directory }}:/config:rw"
+      - "{{ emulatorjs_nes_directory }}:/data/nes/roms"
+      - "{{ emulatorjs_snes_directory }}:/data/snes/roms"
+      - "{{ emulatorjs_gen_directory }}:/data/segaMD/roms"
+      - "{{ emulatorjs_gba_directory }}:/data/gba/roms"
+      - "{{ emulatorjs_n64_directory }}:/data/n64/roms"
+      - "{{ emulatorjs_arcade_directory }}:/data/arcade/roms"
+      - "{{ emulatorjs_saturn_directory }}:/data/saturn/roms"
+      - "{{ emulatorjs_playstation_directory }}:/data/psx/roms"
+    ports:
+      - "{{ emulatorjs_port_http }}:80"
+      - "{{ emulatorjs_manage_port_http }}:3000"
+    env:
+      TZ: "{{ ansible_nas_timezone }}"
+      PUID: "{{ emulatorjs_user_id }}"
+      PGID: "{{ emulatorjs_group_id }}"
+    restart_policy: unless-stopped
+    #memory: "{{ emulatorjs_memory }}"

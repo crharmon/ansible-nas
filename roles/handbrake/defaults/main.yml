@@ -1,0 +1,20 @@
+---
+# enable or disable the application
+handbrake_enabled: false
+
+# directories
+handbrake_config_directory: "{{ docker_home }}/handbrake/config"
+handbrake_home_directory: "{{ docker_home }}/handbrake"
+handbrake_watch_directory: "{{ downloads_root }}/handbrake/watch"
+handbrake_output_directory: "{{ downloads_root }}/handbrake/output"
+
+# uid / gid
+handbrake_user_id: "0"
+handbrake_group_id: "0"
+
+# network
+handbrake_hostname: "handbrake"
+handbrake_port_http: "5800"
+
+# specs
+#emulatorjs_memory: "1g"

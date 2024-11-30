@@ -1,0 +1,55 @@
+---
+- Glances Grid:
+    - Glances:
+        href: http://mini-me:61208
+        icon: glances.png
+        description: Glances Stats
+        widget:
+            type: glances
+            url: http://mini-me:61208
+            version: 4 # required only if running glances v4 or higher, defaults to 3
+            metric: info
+            diskUnits: bytes # optional, bytes (default) or bbytes. Only applies to disk
+            refreshInterval: 2000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
+            pointsLimit: 15 # optional, defaults to 15
+    - CPU Usage:
+        widget:
+            type: glances
+            url: http://mini-me:61208
+            metric: cpu
+            version: 4
+            refreshInterval: 2000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
+            pointsLimit: 15 # optional, defaults to 15
+    - Memory Usage:
+        widget:
+            type: glances
+            url: http://mini-me:61208
+            metric: memory
+            version: 4
+            refreshInterval: 2000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
+            pointsLimit: 15 # optional, defaults to 15
+    - Top:
+        widget:
+            type: glances
+            url: http://mini-me:61208
+            metric: process
+            version: 4
+            refreshInterval: 2000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
+            pointsLimit: 15 # optional, defaults to 15
+    - Network Usage:
+        widget:
+            type: glances
+            url: http://mini-me:61208
+            metric: network:eth0
+            version: 4
+            refreshInterval: 2000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
+            pointsLimit: 15 # optional, defaults to 15
+    - Disk Usage:
+        widget:
+            type: glances
+            url: http://mini-me:61208
+            metric: disk:sda
+            version: 4
+            diskUnits: bytes # optional, bytes (default) or bbytes. Only applies to disk
+            refreshInterval: 2000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
+            pointsLimit: 15 # optional, defaults to 15

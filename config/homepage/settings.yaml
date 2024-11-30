@@ -9,3 +9,5 @@ layout:
   Glances Grid:
     style: row
     columns: 3  # 3x2 grid for the other Glances widgets
+  Developer:
+  Entertainment:

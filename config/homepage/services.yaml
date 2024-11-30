@@ -13,6 +13,7 @@
             refreshInterval: 2000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
             pointsLimit: 15 # optional, defaults to 15
     - CPU Usage:
+        href: http://mini-me:61208
         widget:
             type: glances
             url: http://mini-me:61208
@@ -21,6 +22,7 @@
             refreshInterval: 2000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
             pointsLimit: 15 # optional, defaults to 15
     - Memory Usage:
+        href: http://mini-me:61208
         widget:
             type: glances
             url: http://mini-me:61208
@@ -29,6 +31,7 @@
             refreshInterval: 2000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
             pointsLimit: 15 # optional, defaults to 15
     - Top:
+        href: http://mini-me:61208
         widget:
             type: glances
             url: http://mini-me:61208
@@ -37,6 +40,7 @@
             refreshInterval: 2000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
             pointsLimit: 15 # optional, defaults to 15
     - Network Usage:
+        href: http://mini-me:61208
         widget:
             type: glances
             url: http://mini-me:61208
@@ -45,6 +49,7 @@
             refreshInterval: 2000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
             pointsLimit: 15 # optional, defaults to 15
     - Disk Usage:
+        href: http://mini-me:61208
         widget:
             type: glances
             url: http://mini-me:61208

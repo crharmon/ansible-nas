@@ -14,9 +14,9 @@ ansible_nas_hostname: mini-me
 ansible_nas_timezone: Etc/UTC
 
 ## Enable some applications
-dashy_enabled: true
+#dashy_enabled: true
 code_server_enabled: true
-gitea_enabled: true
+#gitea_enabled: true
 #gitea_available_externally: true
 portainer_enabled: true
 # deluge_enabled: true
@@ -30,7 +30,7 @@ youtubedlmaterial_enabled: true
 jellyfin_enabled: true
 #jellyfin_available_externally: true
 glances_enabled: true
-nextcloud_enabled: true
+#nextcloud_enabled: true
 #next_cloud_available_externally: true
 #traefik_enabled: true
 # piwigo_enabled: false

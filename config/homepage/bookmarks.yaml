@@ -1,0 +1,22 @@
+---
+- Developer:
+    - MyGithub:
+        - icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/github-light.svg
+          href: https://github.com/crharmon/ansible-nas
+    -   Ansible-NAS:
+        - icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/ansible-light.svg
+          href: https://ansible-nas.io/
+    -   Homepage:
+        - icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/homepage.png
+          href: https://gethomepage.dev/
+
+- Entertainment:
+    - YouTube:
+        - icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/youtube.svg
+          href: https://youtube.com/
+    - Crunchyroll:
+        - icon: si-crunchyroll
+          href: https://www.crunchyroll.com/videos/new
+    - YouTubeMusic:
+        - icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/apple-music.svg
+          href: https://music.youtube.com/

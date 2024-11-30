@@ -39,3 +39,4 @@ emulatorjs_enabled: true
 #cloudflare_ddns_enabled: true
 handbrake_enabled: true
 deluge_enabled: true
+homepage_enabled: true

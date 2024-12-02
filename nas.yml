@@ -472,3 +472,8 @@
       tags:
         - handbrake
       when: (handbrake_enabled | default(false))
+    
+    - role: open-webui-ai
+      tags:
+        - open_webui_ai
+      when: (open_webui_ai_enabled | default(false))

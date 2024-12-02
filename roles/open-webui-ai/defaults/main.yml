@@ -1,0 +1,18 @@
+---
+# enable or disable the application
+open_webui_ai_enabled: false
+
+# directories
+open_webui_ai_ollama_directory: "{{ docker_home }}/open_webui_ai/ollama"
+open_webui_ai_app_data_directory: "{{ docker_home }}/open_webui_ai/app_data"
+
+# uid / gid
+open_webui_ai_user_id: "0"
+open_webui_ai_group_id: "0"
+
+# network
+open_webui_ai_hostname: "open_webui_ai"
+open_webui_ai_port_http: "3001"
+
+# specs
+#emulatorjs_memory: "1g"

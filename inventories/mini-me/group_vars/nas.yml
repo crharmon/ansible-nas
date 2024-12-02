@@ -37,6 +37,7 @@ glances_enabled: true
 emulatorjs_enabled: true
 #emulatorjs_available_externally: true
 #cloudflare_ddns_enabled: true
+open_webui_ai_enabled: true
 handbrake_enabled: true
 deluge_enabled: true
 homepage_enabled: true

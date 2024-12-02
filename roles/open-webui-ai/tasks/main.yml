@@ -1,0 +1,30 @@
+---
+- name: Create Open_webui_ai Directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ open_webui_ai_ollama_directory }}"
+    - "{{ open_webui_ai_app_data_directory }}"
+
+- name: open_webui_ai Docker Container
+  docker_container:
+    name: open_webui_ai
+    image: ghcr.io/open-webui/open-webui:ollama
+    pull: true
+    volumes:
+      #- "ollama:/root/.ollama"
+      #- "open-webui:/app/backend/data"
+      - "{{ open_webui_ai_ollama_directory }}:/root/.ollama:rw"
+      - "{{ open_webui_ai_app_data_directory }}:/app/backend/data:rw"
+      
+    ports:
+      - "{{ open_webui_ai_port_http }}:8080"
+    labels:
+      homepage.group: Tech Tools
+      homepage.name: Open WebUI
+      homepage.icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/open-webui.png
+      homepage.href: "http://{{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}:{{ open_webui_ai_port_http}}"
+      homepage.description: Self Hosted Ollama LLM AI
+    restart_policy: unless-stopped
+    #memory: "{{ emulatorjs_memory }}"
